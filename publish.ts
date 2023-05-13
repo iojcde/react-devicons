@@ -24,7 +24,7 @@ const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
   ).data.tag_name.replace("v", "");
   const currentVersion = (
     await octokit.request("GET /repos/{owner}/{repo}/releases/latest", {
-      owner: "devicons",
+      owner: "iojcde",
       repo: "react-devicons",
     })
   ).data.tag_name.replace("v", "");
