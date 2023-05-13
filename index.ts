@@ -29,7 +29,7 @@ interface ConfigEntry {
     fs.rmSync(`${__dirname}/dist`, { recursive: true });
   fsAsync.mkdir(`${__dirname}/tmp`);
 
-  await degit("devicons/devicon").clone(`${__dirname}/tmp/devicon`);
+  await degit("devicons/devicon#develop").clone(`${__dirname}/tmp/devicon`);
 
   const deviconConfig: ConfigEntry[] = JSON.parse(
     (await fsAsync.readFile(`${__dirname}/tmp/devicon/devicon.json`)).toString()
